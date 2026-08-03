@@ -238,7 +238,7 @@ function playHeroIntro() {
   gsap.to(".hero-heading .word", {
     y: "0%", duration: 1.1, stagger: 0.06, ease: "power4.out", delay: 0.1
   });
-  gsap.from(".hero-tagline, .hero-actions, .hero-trust, .scroll-indicator", {
+  gsap.from(".hero-tagline, .hero-actions, .hero-trust", {
     opacity: 0, y: 24, duration: 1, stagger: 0.12, ease: "power3.out", delay: 0.7
   });
 }
