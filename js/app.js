@@ -110,7 +110,9 @@ gsap.registerPlugin(ScrollTrigger);
 })();
 
 /* ============================================================
-   CTA FINAL — URGENCY COUNTDOWN (days:hours:min:sec until end of month)
+   CTA FINAL — URGENCY COUNTDOWN
+   Mirrors the exact same expiry as the promo bar above (shared
+   sessionStorage key), just displayed as days:hours:min:sec.
    ============================================================ */
 (function urgencyCountdown() {
   const dEl = document.getElementById("t-days");
@@ -119,11 +121,10 @@ gsap.registerPlugin(ScrollTrigger);
   const sEl = document.getElementById("t-sec");
   if (!dEl) return;
 
-  const now = new Date();
-  const deadline = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+  const deadline = parseInt(sessionStorage.getItem("promoExpiry"), 10) || Date.now();
 
   function tick() {
-    const diff = Math.max(0, deadline - new Date());
+    const diff = Math.max(0, deadline - Date.now());
     const days = Math.floor(diff / 86400000);
     const hours = Math.floor((diff / 3600000) % 24);
     const mins = Math.floor((diff / 60000) % 60);
