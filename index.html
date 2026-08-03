@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guarda Rodas — Volte a trabalhar hoje</title>
+<meta name="description" content="Alugue uma moto 0KM na Guarda Rodas Locação. Sem consulta ao SPC ou Serasa, IPVA e proteção inclusos. Ideal para iFood, Uber Moto, 99Moto e entregas.">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=switzer@400,500,600&display=swap">
+<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-brand"><img src="assets/logo.png" alt="Guarda Rodas Locação"></div>
+  <div id="loader-bar"><div id="loader-bar-fill"></div></div>
+  <div id="loader-percent">0%</div>
+</div>
+
+<!-- CURSOR GLOW -->
+<div id="cursor-glow"></div>
+
+<!-- SOCIAL PROOF POPUP -->
+<div class="social-toast" id="social-toast">
+  <span class="social-toast-dot"></span>
+  <span class="social-toast-text" id="social-toast-text"></span>
+</div>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<div class="whatsapp-wrap">
+  <div class="whatsapp-bubble" id="whatsapp-bubble">Quer voltar a trabalhar hoje? <span class="whatsapp-bubble-close" aria-label="Fechar">×</span></div>
+  <a href="https://wa.me/5517996554118?text=Ol%C3%A1!%20Quero%20alugar%20uma%20moto%20para%20trabalhar." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.109.552 4.088 1.518 5.803L0 24l6.363-1.487A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.996 0-3.85-.583-5.412-1.586l-.388-.242-3.777.883.809-3.68-.253-.397A9.708 9.708 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+  </a>
+</div>
+
+<!-- PROMO BAR -->
+<div id="promo-bar">
+  <span class="promo-text">🔥 <strong>Condição especial de lançamento</strong> — fale agora, oferta termina em
+    <span class="promo-clock">⏰<span id="promo-timer">10:00</span></span>
+  </span>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <nav class="nav">
+    <a href="#hero" class="logo" id="logo-top" aria-label="Voltar ao topo"><img src="assets/logo.png" alt="Guarda Rodas Locação"></a>
+    <ul class="nav-links">
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#como-funciona">Como Funciona</a></li>
+      <li><a href="#fidelidade">Plano Fidelidade</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="https://wa.me/5517996554118?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20a%20trabalhar." class="nav-cta" target="_blank" rel="noopener">Falar Agora</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ===================================================== -->
+  <!-- 01 HERO -->
+  <!-- ===================================================== -->
+  <section class="hero-standalone" id="hero">
+    <video class="bg-video" autoplay muted loop playsinline poster="">
+      <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-vignette"></div>
+    <div class="hero-content">
+      <span class="section-label">GUARDA RODAS / LOCAÇÃO DE MOTOS</span>
+      <h1 class="hero-heading">
+        <span class="line"><span class="word">Você</span> <span class="word">pode</span></span>
+        <span class="line"><span class="word">voltar</span> <span class="word">a</span> <span class="word">trabalhar</span></span>
+        <span class="line"><span class="word accent">hoje.</span></span>
+      </h1>
+      <p class="hero-tagline">
+        Alugue uma moto 0KM e comece a gerar renda ainda essa semana.<br>
+        Sem burocracia. Sem consulta ao SPC ou Serasa.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5517996554118?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20a%20trabalhar." class="btn btn-primary" target="_blank" rel="noopener">🚀 Quero começar a trabalhar</a>
+        <a href="#como-funciona" class="btn btn-ghost">Ver como funciona</a>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-trust-item"><strong>4.9★</strong> no Google</span>
+        <span class="hero-trust-divider"></span>
+        <span class="hero-trust-item"><strong>+2.500</strong> motoristas já recomeçaram</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 02 A DOR -->
+  <!-- ===================================================== -->
+  <section class="scroll-block problem-block" id="dor">
+    <video class="bg-video bg-video--dim" autoplay muted loop playsinline preload="none">
+      <source data-src="videos/dor.mp4" type="video/mp4">
+    </video>
+    <div class="problem-inner">
+      <span class="section-label">ANTES DE MAIS NADA</span>
+      <h2 class="reveal-heading">
+        Você não perdeu a vontade<br>
+        de trabalhar. Só falta<br>
+        o veículo certo.
+      </h2>
+      <p class="problem-lines">
+        Perdeu corridas, perdeu entregas, perdeu dias de renda?
+        Talvez seu nome esteja negativado. Talvez a moto tenha sido roubada.
+        Talvez o financiamento tenha negado.<br><br>
+        Seja qual for o motivo — você não está sozinho, e ele não precisa
+        continuar te travando. <strong>Existe um jeito de voltar a trabalhar essa semana.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 03 BENEFÍCIOS -->
+  <!-- ===================================================== -->
+  <section class="scroll-block benefits-block" id="beneficios">
+    <video class="bg-video bg-video--dim" autoplay muted loop playsinline preload="none">
+      <source data-src="videos/beneficios.mp4" type="video/mp4">
+    </video>
+    <div class="benefits-inner">
+      <span class="section-label center">O QUE VOCÊ GANHA</span>
+      <h2 class="reveal-heading center">Tudo o que você precisa<br>pra voltar a trabalhar.</h2>
+      <div class="benefits-carousel">
+        <div class="benefit-slide active">
+          <div class="benefit-card"><span class="benefit-icon">🏍</span><h3>Moto 0KM</h3><p>Pronta pra trabalhar no mesmo dia da retirada.</p></div>
+        </div>
+        <div class="benefit-slide">
+          <div class="benefit-card"><span class="benefit-icon">🚫</span><h3>Sem SPC</h3><p>Seu nome negativado não te impede de trabalhar aqui.</p></div>
+        </div>
+        <div class="benefit-slide">
+          <div class="benefit-card"><span class="benefit-icon">🚫</span><h3>Sem Serasa</h3><p>Não fazemos esse tipo de consulta. Ponto final.</p></div>
+        </div>
+        <div class="benefit-slide">
+          <div class="benefit-card"><span class="benefit-icon">⚡</span><h3>Aprovação rápida</h3><p>Processo pensado pra quem precisa começar logo.</p></div>
+        </div>
+        <div class="benefit-slide">
+          <div class="benefit-card"><span class="benefit-icon">🛡</span><h3>Proteção inclusa</h3><p>Você trabalha tranquilo, sem medo de imprevisto.</p></div>
+        </div>
+        <div class="benefit-slide">
+          <div class="benefit-card"><span class="benefit-icon">📄</span><h3>IPVA e licenciamento</h3><p>Nada de custo escondido no fim do mês.</p></div>
+        </div>
+        <div class="benefit-slide">
+          <div class="benefit-card"><span class="benefit-icon">🤝</span><h3>Atendimento humano</h3><p>Gente de verdade te ajudando, do jeito que devia ser.</p></div>
+        </div>
+        <div class="benefit-slide">
+          <div class="benefit-card"><span class="benefit-icon">📱</span><h3>Ideal pra apps</h3><p>iFood, Uber Moto, 99Moto e entregas em geral.</p></div>
+        </div>
+        <button class="benefit-arrow benefit-arrow--prev" aria-label="Benefício anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="benefit-arrow benefit-arrow--next" aria-label="Próximo benefício">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+      <div class="benefit-dots">
+        <span class="benefit-dot active"></span>
+        <span class="benefit-dot"></span>
+        <span class="benefit-dot"></span>
+        <span class="benefit-dot"></span>
+        <span class="benefit-dot"></span>
+        <span class="benefit-dot"></span>
+        <span class="benefit-dot"></span>
+        <span class="benefit-dot"></span>
+      </div>
+      <a href="https://wa.me/5517996554118?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20consultor." class="btn btn-primary" target="_blank" rel="noopener">📲 Falar com um consultor</a>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 04 COMO FUNCIONA (timeline horizontal pinada) -->
+  <!-- ===================================================== -->
+  <section class="how-it-works" id="como-funciona">
+    <div class="how-pin">
+      <video class="bg-video bg-video--dim" autoplay muted loop playsinline preload="none">
+        <source data-src="videos/como-funciona.mp4" type="video/mp4">
+      </video>
+      <span class="section-label">COMO FUNCIONA</span>
+      <div class="timeline-track">
+        <div class="timeline-step">
+          <span class="step-number">01</span>
+          <h3>Solicite atendimento</h3>
+          <p>Manda uma mensagem no WhatsApp e conta sua situação.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">02</span>
+          <h3>Escolha o plano</h3>
+          <p>Fidelidade ou Convencional — a gente te ajuda a decidir.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">03</span>
+          <h3>Aprovação</h3>
+          <p>Rápida, sem enrolação, sem SPC nem Serasa.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">04</span>
+          <h3>Retire sua moto</h3>
+          <p>0KM, revisada e pronta pra rodar.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">05</span>
+          <h3>Comece a trabalhar</h3>
+          <p>Hoje mesmo você já pode estar gerando renda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 05 PLANO FIDELIDADE -->
+  <!-- ===================================================== -->
+  <section class="scroll-block solution-block" id="fidelidade">
+    <video class="bg-video bg-video--dim" autoplay muted loop playsinline preload="none">
+      <source data-src="videos/fidelidade.mp4" type="video/mp4">
+    </video>
+    <div class="solution-copy">
+      <span class="section-label">A MAIOR OPORTUNIDADE DA GUARDA RODAS</span>
+      <h2 class="reveal-heading">E se, no final,<br>a moto fosse sua?</h2>
+      <p class="solution-body">
+        Já imaginou começar a trabalhar hoje e, no final do contrato, ter sua própria moto?
+        Enquanto você roda, entrega, faz suas corridas — você também pode estar construindo
+        o caminho para conquistar o seu próprio veículo.
+      </p>
+      <ul class="solution-bullets">
+        <li>Feito para quem quer crescer, não só sobreviver</li>
+        <li>Condições pensadas pra recompensar quem permanece</li>
+        <li>Sua moto pode deixar de ser "alugada" pra ser conquistada</li>
+      </ul>
+      <a href="https://wa.me/5517996554118?text=Ol%C3%A1!%20Quero%20entender%20o%20Plano%20Fidelidade." class="btn btn-primary" target="_blank" rel="noopener">💬 Quero entender o Plano Fidelidade</a>
+      <p class="solution-disclaimer">* Consulte um consultor para conhecer todas as condições e regras do plano.</p>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 06 PLANOS -->
+  <!-- ===================================================== -->
+  <section class="plans-section" id="planos">
+    <video class="bg-video bg-video--dim" autoplay muted loop playsinline preload="none">
+      <source data-src="videos/comparacao.mp4" type="video/mp4">
+    </video>
+    <span class="section-label center">PLANOS</span>
+    <h2 class="reveal-heading center">Dois caminhos.<br>Um se encaixa em você.</h2>
+    <div class="plans-row">
+      <div class="plan-column">
+        <span class="plan-name">Plano Convencional</span>
+        <span class="plan-indicado">Pra quem quer começar a trabalhar rápido</span>
+        <ul class="plan-features">
+          <li>Moto 0KM</li>
+          <li>IPVA e licenciamento inclusos</li>
+          <li>Proteção veicular inclusa</li>
+          <li>Sem consulta SPC/Serasa</li>
+          <li>Atendimento padrão</li>
+        </ul>
+        <a href="https://wa.me/5517996554118?text=Ol%C3%A1!%20Quero%20o%20Plano%20Convencional." class="plan-cta" target="_blank" rel="noopener">Selecionar</a>
+      </div>
+      <div class="plan-column plan-column--premium">
+        <span class="plan-badge">⭐ Mais escolhido</span>
+        <span class="plan-name">Plano Fidelidade</span>
+        <span class="plan-indicado">Pra quem quer trabalhar e construir algo</span>
+        <ul class="plan-features">
+          <li>Moto 0KM</li>
+          <li>IPVA e licenciamento inclusos</li>
+          <li>Proteção veicular inclusa</li>
+          <li>Sem consulta SPC/Serasa</li>
+          <li>Caminho real para a moto própria</li>
+          <li>Atendimento prioritário</li>
+        </ul>
+        <a href="https://wa.me/5517996554118?text=Ol%C3%A1!%20Quero%20minha%20moto%20-%20Plano%20Fidelidade." class="plan-cta plan-cta--premium" target="_blank" rel="noopener">🏍 Quero minha moto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 07 DIFERENCIAIS (marquee) -->
+  <!-- ===================================================== -->
+  <section class="marquee-wrap" id="diferenciais" data-scroll-speed="-20">
+    <div class="marquee-text">
+      LIBERDADE &nbsp;•&nbsp; INDEPENDÊNCIA &nbsp;•&nbsp; RECOMEÇO &nbsp;•&nbsp;
+      DIGNIDADE &nbsp;•&nbsp; OPORTUNIDADE &nbsp;•&nbsp; VOLTAR A TRABALHAR &nbsp;•&nbsp;
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 08 PROVA SOCIAL -->
+  <!-- ===================================================== -->
+  <section class="testimonials" id="depoimentos">
+    <video class="bg-video bg-video--dim" autoplay muted loop playsinline preload="none">
+      <source data-src="videos/prova-social.mp4" type="video/mp4">
+    </video>
+    <span class="section-label center">GENTE REAL, RECOMEÇOS REAIS</span>
+    <div class="stat-row">
+      <div class="stat"><span class="stat-number" data-value="4.9" data-decimals="1">0</span><span class="stat-suffix">no Google</span></div>
+      <div class="stat"><span class="stat-number-row"><span class="stat-number" data-value="2500" data-decimals="0">0</span><span class="stat-unit">+</span></span><span class="stat-suffix">motoristas atendidos</span></div>
+      <div class="stat"><span class="stat-number-row"><span class="stat-number" data-value="800" data-decimals="0">0</span><span class="stat-unit">+</span></span><span class="stat-suffix">motos em circulação</span></div>
+      <div class="stat"><span class="stat-number" data-value="7" data-decimals="0">0</span><span class="stat-suffix">anos no mercado</span></div>
+    </div>
+    <div class="testimonial-carousel">
+      <div class="testimonial-slide active">
+        <div class="testimonial-card">
+          <span class="testimonial-stars">★★★★★</span>
+          <p>"Eu tinha perdido minha moto e não sabia como voltar a trabalhar. Em 2 dias eu já tava rodando de novo."</p>
+          <div class="testimonial-author"><span>Entregador iFood — São José do Rio Preto</span></div>
+        </div>
+      </div>
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <span class="testimonial-stars">★★★★★</span>
+          <p>"Meu nome tava sujo e todo lugar me negava. Aqui foi diferente."</p>
+          <div class="testimonial-author"><span>Motorista Uber Moto — Rio Preto</span></div>
+        </div>
+      </div>
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <span class="testimonial-stars">★★★★★</span>
+          <p>"Hoje eu não trabalho só pensando no aluguel. Trabalho pensando na moto que vai ser minha."</p>
+          <div class="testimonial-author"><span>Cliente Plano Fidelidade</span></div>
+        </div>
+      </div>
+      <button class="testimonial-arrow testimonial-arrow--prev" aria-label="Depoimento anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="testimonial-arrow testimonial-arrow--next" aria-label="Próximo depoimento">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+    <div class="testimonial-dots">
+      <span class="testimonial-dot active"></span>
+      <span class="testimonial-dot"></span>
+      <span class="testimonial-dot"></span>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 09 FAQ -->
+  <!-- ===================================================== -->
+  <section class="faq-section" id="faq">
+    <video class="bg-video bg-video--dim" autoplay muted loop playsinline preload="none">
+      <source data-src="videos/faq.mp4" type="video/mp4">
+    </video>
+    <span class="section-label center">PERGUNTAS FREQUENTES</span>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Precisa consultar o SPC?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Não. Não fazemos esse tipo de consulta para aprovação.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Precisa consultar o Serasa?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Não. Seu nome negativado não te impede de alugar com a gente.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Quais documentos eu preciso?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Documentos básicos, sem burocracia. Um consultor te explica exatamente o que levar assim que você chamar no WhatsApp.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">A moto é nova?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Sim. Trabalhamos com motos 0KM, prontas pra rodar.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Posso trabalhar com aplicativos?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Sim, a moto é ideal para iFood, Uber Moto, 99Moto e entregas em geral.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Tem proteção incluída?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Sim, proteção veicular inclusa em todos os planos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Como funciona o Plano Fidelidade?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>É o plano pensado para quem quer trabalhar hoje e, ao mesmo tempo, construir o caminho para ter sua própria moto no futuro. Um consultor te explica todos os detalhes e condições.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Quanto tempo demora a aprovação?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>O processo foi pensado pra ser rápido — muita gente já sai rodando no mesmo dia ou no dia seguinte.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 10 CTA FINAL -->
+  <!-- ===================================================== -->
+  <section class="cta-final" id="cta-final">
+    <video class="bg-video" autoplay muted loop playsinline preload="none">
+      <source data-src="videos/cta-final.mp4" type="video/mp4">
+    </video>
+    <div class="cta-content">
+      <h2 class="reveal-heading">Hoje pode ser o dia<br><span class="accent">que você volta a trabalhar.</span></h2>
+      <p class="cta-sub">Um passo. Uma mensagem. Um novo começo.</p>
+      <a href="https://wa.me/5517996554118?text=Ol%C3%A1!%20Quero%20sair%20com%20minha%20moto%20hoje." class="btn btn-primary btn-large" target="_blank" rel="noopener">🔥 Quero sair com minha moto hoje</a>
+
+      <div class="urgency-timer">
+        <span class="payment-label">Condição especial válida por tempo limitado</span>
+        <div class="timer-digits">
+          <div class="timer-unit"><span id="t-days">00</span><small>dias</small></div>:
+          <div class="timer-unit"><span id="t-hours">00</span><small>hrs</small></div>:
+          <div class="timer-unit"><span id="t-min">00</span><small>min</small></div>:
+          <div class="timer-unit"><span id="t-sec">00</span><small>seg</small></div>
+        </div>
+      </div>
+
+      <a href="#hero" class="back-to-top" id="back-to-top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        Voltar ao topo
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-logo"><img src="assets/logo.png" alt="Guarda Rodas Locação"></div>
+    <ul class="footer-links">
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+  <div class="footer-company">
+    <span>Guarda Rodas Locação Ltda.</span>
+    <span>CNPJ: 60.547.321/0001-32</span>
+    <span>Rua Coutinho Cavalcanti, nº 723 – Jardim Vieira, CEP 15054-300 – São José do Rio Preto/SP</span>
+  </div>
+  <span class="footer-copy">© 2026 Guarda Rodas Locação Ltda. Todos os direitos reservados.</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
