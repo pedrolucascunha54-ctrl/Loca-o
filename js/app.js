@@ -233,6 +233,66 @@ window.addEventListener("mousemove", (e) => {
 document.addEventListener("mouseleave", () => glow.classList.remove("active"));
 
 /* ============================================================
+   SCROLL PROGRESS BAR — fills as the whole page scrolls
+   ============================================================ */
+(function scrollProgress() {
+  const bar = document.getElementById("scroll-progress-bar");
+  if (!bar) return;
+  ScrollTrigger.create({
+    trigger: document.body,
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 0.3,
+    onUpdate: (self) => { bar.style.width = (self.progress * 100) + "%"; }
+  });
+})();
+
+/* ============================================================
+   BACKGROUND VIDEO PARALLAX — subtle zoom-out + drift per section,
+   scrubbed to that section's own scroll range for a layered, tech feel
+   ============================================================ */
+(function videoParallax() {
+  document.querySelectorAll(".bg-video").forEach((video) => {
+    const section = video.closest("section");
+    if (!section) return;
+    gsap.fromTo(video,
+      { scale: 1.18, yPercent: -4 },
+      {
+        scale: 1.0, yPercent: 4, ease: "none",
+        scrollTrigger: { trigger: section, start: "top bottom", end: "bottom top", scrub: 1 }
+      }
+    );
+  });
+})();
+
+/* ============================================================
+   SECTION LABEL DECODE — terminal-style scramble reveal, once per label
+   ============================================================ */
+(function decodeLabels() {
+  const CHARS = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&";
+  function scrambleReveal(el) {
+    const finalText = el.textContent;
+    const len = finalText.length;
+    const proxy = { p: 0 };
+    gsap.to(proxy, {
+      p: 1, duration: 0.7, ease: "power1.out",
+      onUpdate: () => {
+        const revealCount = Math.floor(proxy.p * len);
+        let out = "";
+        for (let i = 0; i < len; i++) {
+          if (i < revealCount || finalText[i] === " " || finalText[i] === "/") out += finalText[i];
+          else out += CHARS[Math.floor(Math.random() * CHARS.length)];
+        }
+        el.textContent = out;
+      },
+      onComplete: () => { el.textContent = finalText; },
+      scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" }
+    });
+  }
+  document.querySelectorAll(".section-label").forEach(scrambleReveal);
+})();
+
+/* ============================================================
    HERO INTRO — word reveal
    ============================================================ */
 function playHeroIntro() {
