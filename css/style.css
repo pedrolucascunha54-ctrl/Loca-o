@@ -174,10 +174,11 @@ img, video { max-width: 100%; display: block; }
 .nav-links a:hover { color: var(--white); }
 .nav-cta {
   font-size: 0.78rem; letter-spacing: 0.04em; padding: 0.7rem 1.4rem;
-  border: 1px solid var(--neon); color: var(--neon); border-radius: 100px;
-  transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out);
+  background: var(--lime); color: var(--bg-void); border-radius: 100px;
+  font-weight: 700; text-transform: uppercase;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 }
-.nav-cta:hover { background: var(--neon); color: var(--bg-void); }
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 24px rgba(215,245,66,0.4); }
 
 /* ============================================================
    SHARED TYPOGRAPHY / UTILITIES
@@ -203,13 +204,22 @@ img, video { max-width: 100%; display: block; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 1rem 2.2rem; font-size: 0.85rem; letter-spacing: 0.03em;
-  border-radius: 100px; font-weight: 500; transition: all 0.35s var(--ease-out);
+  border-radius: 100px; font-weight: 700; transition: all 0.35s var(--ease-out);
+  text-transform: uppercase;
 }
-.btn-primary { background: var(--neon); color: var(--bg-void); }
-.btn-primary:hover { box-shadow: 0 0 32px var(--neon-glow); transform: translateY(-2px); }
+.btn-primary { background: var(--lime); color: var(--bg-void); }
+.btn-primary:hover { box-shadow: 0 0 32px rgba(215,245,66,0.45); transform: translateY(-2px); }
 .btn-ghost { border: 1px solid rgba(255,255,255,0.2); color: var(--white); }
-.btn-ghost:hover { border-color: var(--neon); color: var(--neon); }
+.btn-ghost:hover { border-color: var(--lime); color: var(--lime); }
 .btn-large { padding: 1.3rem 3rem; font-size: 1rem; }
+
+.btn-whats-inline {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: var(--lime); color: var(--bg-void); font-weight: 700; text-transform: uppercase;
+  font-size: 0.72rem; letter-spacing: 0.02em; padding: 0.8rem 1.4rem; border-radius: 100px;
+  margin-top: 1.4rem; text-align: center; transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+.btn-whats-inline:hover { transform: translateY(-2px); box-shadow: 0 0 24px rgba(215,245,66,0.4); }
 
 /* ============================================================
    BACKGROUND VIDEO UTILITY
@@ -367,7 +377,6 @@ img, video { max-width: 100%; display: block; }
 .solution-bullets { display: inline-flex; flex-direction: column; gap: 0.7rem; text-align: left; margin-bottom: 2.4rem; }
 .solution-bullets li { font-size: 0.95rem; color: var(--white-strong); padding-left: 1.6rem; position: relative; }
 .solution-bullets li::before { content: "✓"; position: absolute; left: 0; color: var(--lime); font-weight: 700; }
-.solution-disclaimer { font-size: 0.72rem; color: var(--steel-dim); margin-top: 1.4rem; }
 
 /* ============================================================
    06 PLANOS
@@ -392,9 +401,13 @@ img, video { max-width: 100%; display: block; }
 .plan-name { display: block; font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; margin: 0.8rem 0 0.4rem; color: var(--white-strong); }
 .plan-indicado { display: block; font-size: 0.82rem; color: var(--white-strong); margin-bottom: 2rem; }
 .plan-features li { font-size: 0.85rem; color: var(--white-strong); padding: 0.6rem 0; border-top: 1px solid rgba(255,255,255,0.12); }
-.plan-cta { display: block; text-align: center; margin-top: 2.5rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.3); border-radius: 100px; font-size: 0.82rem; color: var(--white-strong); transition: all 0.3s var(--ease-out); }
-.plan-cta:hover, .plan-cta--premium { border-color: var(--neon); color: var(--neon); }
-.plan-cta--premium:hover { background: var(--neon); color: var(--bg-void); }
+.plan-cta {
+  display: block; text-align: center; margin-top: 2.5rem; padding: 1rem;
+  background: var(--lime); color: var(--bg-void); border-radius: 100px;
+  font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+.plan-cta:hover { transform: translateY(-2px); box-shadow: 0 0 24px rgba(215,245,66,0.4); }
 
 /* ============================================================
    02 DIFERENCIAIS — marquee (loop contínuo, sem depender do scroll)
