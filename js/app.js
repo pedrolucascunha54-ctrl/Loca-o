@@ -440,15 +440,15 @@ gsap.from(".testimonial-carousel, .testimonial-dots", {
 })();
 
 /* ============================================================
-   HORIZONTAL MARQUEE
+   HORIZONTAL MARQUEE — continuous infinite loop, independent of scroll
    ============================================================ */
-document.querySelectorAll(".marquee-wrap").forEach((wrap) => {
-  const text = wrap.querySelector(".marquee-text");
-  const speed = parseFloat(wrap.dataset.scrollSpeed) || -20;
-  gsap.to(text, {
-    xPercent: speed,
+document.querySelectorAll(".marquee-track").forEach((track) => {
+  const halfWidth = track.scrollWidth / 2;
+  gsap.to(track, {
+    x: -halfWidth,
+    duration: 22,
     ease: "none",
-    scrollTrigger: { trigger: wrap, start: "top bottom", end: "bottom top", scrub: 1 }
+    repeat: -1
   });
 });
 

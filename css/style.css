@@ -217,11 +217,11 @@ img, video { max-width: 100%; display: block; }
 .bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
 .bg-video--dim { opacity: 0.5; filter: brightness(1.15); }
 
-.problem-block, .benefits-block, .plans-section, .marquee-wrap, .testimonials, .faq-section, .solution-block {
+.problem-block, .benefits-block, .plans-section, .testimonials, .faq-section, .solution-block {
   position: relative; overflow: hidden;
 }
 .problem-block::before, .benefits-block::before, .how-pin::before, .plans-section::before,
-.marquee-wrap::before, .testimonials::before, .faq-section::before,
+.testimonials::before, .faq-section::before,
 .solution-block::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: radial-gradient(circle at 50% 40%, var(--neon-glow) 0%, transparent 65%);
@@ -229,7 +229,7 @@ img, video { max-width: 100%; display: block; }
 }
 .problem-block > *:not(.bg-video), .benefits-block > *:not(.bg-video),
 .how-pin > *:not(.bg-video), .plans-section > *:not(.bg-video),
-.marquee-wrap > *:not(.bg-video), .testimonials > *:not(.bg-video),
+.testimonials > *:not(.bg-video),
 .faq-section > *:not(.bg-video), .solution-block > *:not(.bg-video) {
   position: relative; z-index: 1;
 }
@@ -404,12 +404,13 @@ img, video { max-width: 100%; display: block; }
 .plan-cta--premium:hover { background: var(--neon); color: var(--bg-void); }
 
 /* ============================================================
-   07 DIFERENCIAIS — marquee
+   02 DIFERENCIAIS — marquee (loop contínuo, sem depender do scroll)
    ============================================================ */
-.marquee-wrap { background: var(--bg-void); padding: 8vh 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.marquee-wrap { position: relative; background: var(--lime); padding: 2vh 0; overflow: hidden; }
+.marquee-track { display: flex; width: max-content; }
 .marquee-text {
   font-family: var(--font-display); font-weight: 600; font-size: 6vw;
-  white-space: nowrap; color: transparent; -webkit-text-stroke: 1px var(--steel-dim);
+  white-space: nowrap; color: var(--bg-void);
   text-transform: uppercase; display: inline-block; will-change: transform;
 }
 
