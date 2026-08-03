@@ -11,12 +11,12 @@ gsap.registerPlugin(ScrollTrigger);
   if (!toast || !textEl || !trigger) return;
 
   const messages = [
-    "+1 moto alugada agora — São José do Rio Preto, SP",
-    "+1 motorista aprovado — Campinas, SP",
-    "+1 entregador voltou a trabalhar — São Paulo, SP",
-    "+1 moto retirada hoje — Ribeirão Preto, SP",
-    "+1 motorista Uber Moto aprovado — Bauru, SP",
-    "+1 moto alugada agora — Araraquara, SP"
+    "São José do Rio Preto, SP — +1 moto alugada agora",
+    "Campinas, SP — +1 motorista aprovado",
+    "São Paulo, SP — +1 entregador voltou a trabalhar",
+    "Ribeirão Preto, SP — +1 moto retirada hoje",
+    "Bauru, SP — +1 motorista Uber Moto aprovado",
+    "Araraquara, SP — +1 moto alugada agora"
   ];
   let index = 0;
   let timeoutId = null;
@@ -26,13 +26,13 @@ gsap.registerPlugin(ScrollTrigger);
     textEl.textContent = messages[index % messages.length];
     index++;
     toast.classList.add("visible");
-    setTimeout(() => toast.classList.remove("visible"), 4000);
+    setTimeout(() => toast.classList.remove("visible"), 3000);
   }
 
   function start() {
     if (intervalId) return;
-    timeoutId = setTimeout(showToast, 1500);
-    intervalId = setInterval(showToast, 6000);
+    timeoutId = setTimeout(showToast, 2000);
+    intervalId = setInterval(showToast, 14000);
   }
 
   function stop() {
