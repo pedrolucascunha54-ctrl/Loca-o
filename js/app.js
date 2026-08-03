@@ -11,12 +11,12 @@ gsap.registerPlugin(ScrollTrigger);
   if (!toast || !textEl || !trigger) return;
 
   const messages = [
-    "São José do Rio Preto, SP — +1 moto alugada agora",
-    "Campinas, SP — +1 motorista aprovado",
-    "São Paulo, SP — +1 entregador voltou a trabalhar",
-    "Ribeirão Preto, SP — +1 moto retirada hoje",
-    "Bauru, SP — +1 motorista Uber Moto aprovado",
-    "Araraquara, SP — +1 moto alugada agora"
+    "São José do Rio Preto, SP: +1 moto alugada agora",
+    "Campinas, SP: +1 motorista aprovado",
+    "São Paulo, SP: +1 entregador voltou a trabalhar",
+    "Ribeirão Preto, SP: +1 moto retirada hoje",
+    "Bauru, SP: +1 motorista Uber Moto aprovado",
+    "Araraquara, SP: +1 moto alugada agora"
   ];
   let index = 0;
   let timeoutId = null;
