@@ -413,38 +413,49 @@ img, video { max-width: 100%; display: block; }
    06 PLANOS
    ============================================================ */
 .plans-section { background: var(--bg-deep); padding: 14vh 5vw; }
-.plans-row { display: flex; justify-content: center; align-items: stretch; gap: 2rem; flex-wrap: wrap; margin-top: 6vh; }
+.plans-row { display: flex; justify-content: center; align-items: stretch; gap: 2.4rem; flex-wrap: wrap; margin-top: 6vh; }
 .plan-column {
-  flex: 1 1 340px; max-width: 400px; padding: 3rem 2.2rem;
-  border: 1px solid rgba(0,255,163,0.3); border-radius: 20px;
-  background: linear-gradient(165deg, rgba(0,54,34,0.85), rgba(4,16,11,0.92));
-  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+  flex: 1 1 360px; max-width: 420px; padding: 3.4rem 2.6rem;
+  border: 1px solid rgba(0,255,163,0.35); border-radius: 24px;
+  background: linear-gradient(165deg, rgba(0,64,40,0.9), rgba(3,13,9,0.95));
+  box-shadow: 0 24px 60px rgba(0,0,0,0.45), 0 0 30px rgba(0,255,163,0.06);
   transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
   position: relative;
 }
-.plan-column:hover { transform: translateY(-6px); box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
+.plan-column:hover { transform: translateY(-8px); box-shadow: 0 34px 80px rgba(0,0,0,0.55), 0 0 40px rgba(0,255,163,0.14); }
 .plan-column::before, .plan-column::after {
-  content: ""; position: absolute; width: 16px; height: 16px; pointer-events: none;
-  border-color: var(--neon); border-style: solid; border-width: 0; opacity: 0.6;
+  content: ""; position: absolute; width: 18px; height: 18px; pointer-events: none;
+  border-color: var(--neon); border-style: solid; border-width: 0; opacity: 0.7;
 }
-.plan-column::before { top: 12px; left: 12px; border-top-width: 2px; border-left-width: 2px; }
-.plan-column::after { bottom: 12px; right: 12px; border-bottom-width: 2px; border-right-width: 2px; }
+.plan-column::before { top: 14px; left: 14px; border-top-width: 2px; border-left-width: 2px; }
+.plan-column::after { bottom: 14px; right: 14px; border-bottom-width: 2px; border-right-width: 2px; }
 .plan-column--premium {
-  border-color: var(--neon);
-  background: linear-gradient(165deg, rgba(0,255,163,0.22), rgba(4,16,11,0.92));
-  box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 50px rgba(0,255,163,0.12);
+  border-color: var(--neon); border-width: 2px;
+  background: linear-gradient(165deg, rgba(0,255,163,0.28), rgba(3,13,9,0.95));
+  box-shadow: 0 24px 60px rgba(0,0,0,0.55), 0 0 70px rgba(0,255,163,0.22);
 }
-.plan-badge { display: inline-block; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--neon); text-transform: uppercase; }
-.plan-name { display: block; font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; margin: 0.8rem 0 0.4rem; color: var(--white-strong); }
-.plan-indicado { display: block; font-size: 0.82rem; color: var(--white-strong); margin-bottom: 2rem; }
-.plan-features li { font-size: 0.85rem; color: var(--white-strong); padding: 0.6rem 0; border-top: 1px solid rgba(255,255,255,0.12); }
+.plan-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; color: var(--neon); text-transform: uppercase;
+  text-shadow: 0 0 16px rgba(0,255,163,0.5);
+}
+.plan-name { display: block; font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; margin: 0.9rem 0 0.5rem; color: var(--white-strong); }
+.plan-indicado { display: block; font-size: 0.88rem; color: var(--white-strong); margin-bottom: 1.6rem; }
+.plan-hook {
+  display: block; font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1; letter-spacing: -0.01em;
+  color: var(--lime); text-shadow: 0 0 30px rgba(215,245,66,0.45);
+  margin-bottom: 2rem;
+}
+.plan-features li { font-size: 0.92rem; font-weight: 500; color: var(--white-strong); padding: 0.75rem 0; border-top: 1px solid rgba(255,255,255,0.14); }
 .plan-cta {
-  display: block; text-align: center; margin-top: 2.5rem; padding: 1rem;
+  display: block; text-align: center; margin-top: 2.6rem; padding: 1.15rem;
   background: var(--lime); color: var(--bg-void); border-radius: 100px;
-  font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+  font-size: 0.88rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em;
+  box-shadow: 0 0 0 rgba(215,245,66,0);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 }
-.plan-cta:hover { transform: translateY(-2px); box-shadow: 0 0 24px rgba(215,245,66,0.4); }
+.plan-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 34px rgba(215,245,66,0.4); }
 
 /* ============================================================
    02 DIFERENCIAIS — marquee (loop contínuo, sem depender do scroll)
