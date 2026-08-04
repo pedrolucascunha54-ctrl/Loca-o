@@ -434,7 +434,7 @@ gsap.from(".benefits-carousel, .benefit-dots", {
   }
 })();
 
-gsap.from([".solution-body", ".solution-bullets li", ".solution-copy .btn", ".solution-copy .btn-whats-inline"], {
+gsap.from([".solution-body", ".solution-bullets li", ".solution-tagline", ".solution-closing", ".solution-copy .btn", ".solution-copy .btn-whats-inline"], {
   y: 30, opacity: 0, duration: 0.9, stagger: 0.1, ease: "power3.out",
   scrollTrigger: { trigger: ".solution-block", start: "top 65%" }
 });

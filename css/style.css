@@ -402,6 +402,12 @@ img, video { max-width: 100%; display: block; }
 .solution-bullets { display: inline-flex; flex-direction: column; gap: 0.7rem; text-align: left; margin-bottom: 2.4rem; }
 .solution-bullets li { font-size: 0.95rem; color: var(--white-strong); padding-left: 1.6rem; position: relative; }
 .solution-bullets li::before { content: "✓"; position: absolute; left: 0; color: var(--lime); font-weight: 700; }
+.solution-tagline {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.3rem;
+  color: var(--lime); letter-spacing: 0.02em; margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(215,245,66,0.35);
+}
+.solution-closing { font-size: 0.95rem; font-style: italic; color: var(--white-strong); margin-bottom: 2.2rem; line-height: 1.5; }
 
 /* ============================================================
    06 PLANOS
